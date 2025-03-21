@@ -18,7 +18,7 @@ class PostViewModel : ViewModel() {
         fetchPosts()
     }
 
-    private fun fetchPosts() {
+    fun fetchPosts() {
         viewModelScope.launch {
             _postsState.value = UiState.Loading
             try {
